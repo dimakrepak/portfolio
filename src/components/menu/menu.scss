@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+.menu {
+  width: 300px;
+  height: calc(100vh - 70px);
+  background-color: transparent;
+  position: fixed;
+  top: 100vh;
+  right: 0;
+  z-index: 10;
+  transition: all 1s ease;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  ul {
+    list-style: none;
+    font-size: 40px;
+    color: $dark;
+    li {
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+
+  &.active {
+    top: 70px;
+    right: 0;
+    background-color: $white;
+  }
+}
