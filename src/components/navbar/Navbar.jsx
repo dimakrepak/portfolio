@@ -2,5 +2,5 @@ import "./navbar.scss";
 import "../../variables.scss";
 
 export default function Navbar() {
-  return <div className="navbar"></div>;
+  return <div className="navbar">Navbar</div>;
 }
