@@ -2,4 +2,24 @@
 
 .intro {
   background-color: $dark;
+  display: flex;
+  .left {
+    flex: 0.7;
+    position: relative;
+    .image-container {
+      width: 650px;
+      height: 650px;
+      position: absolute;
+      bottom: 0;
+      img {
+        width: 100%;
+        object-position: left bottom;
+        position: absolute;
+        bottom: -1px;
+      }
+    }
+  }
+  .right {
+    flex: 0.3;
+  }
 }

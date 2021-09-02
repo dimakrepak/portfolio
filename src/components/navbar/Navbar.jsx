@@ -8,7 +8,7 @@ export default function Navbar({ menuIsOpen, setMenuIsOpen }) {
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            <span>me.Dmitry</span>
+            <span>me.portfolio</span>
           </a>
           <div className="mail-container">
             <MailOutline className="icon" />
