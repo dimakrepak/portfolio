@@ -7,9 +7,7 @@ export default function Navbar({ menuIsOpen, setMenuIsOpen }) {
     <div className={"navbar " + (menuIsOpen && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#intro" className="logo">
-            <span>me.portfolio</span>
-          </a>
+          <a href="#intro" className="logo"></a>
           <div className="mail-container">
             <MailOutline className="icon" />
             <span>krepakdima@gmail.com</span>

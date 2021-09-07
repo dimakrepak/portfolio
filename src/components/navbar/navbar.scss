@@ -9,6 +9,7 @@
   z-index: 10;
   transition: all 1s ease;
   .wrapper {
+    height: 100%;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -28,7 +29,6 @@
         justify-content: center;
         align-items: flex-end;
         margin-left: 20px;
-        margin-bottom: 8px;
         color: $yellow;
         font-size: 14px;
       }

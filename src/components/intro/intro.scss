@@ -4,22 +4,71 @@
   background-color: $dark;
   display: flex;
   .left {
-    flex: 0.7;
+    flex: 0.5;
     position: relative;
     .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       width: 650px;
       height: 650px;
       position: absolute;
       bottom: 0;
       img {
         width: 100%;
-        object-position: left bottom;
-        position: absolute;
-        bottom: -1px;
       }
     }
   }
   .right {
-    flex: 0.3;
+    flex: 0.5;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100%;
+    .wrapper {
+      display: flex;
+      position: relative;
+      left: -250px;
+      flex-flow: column;
+      justify-self: flex-end;
+      justify-content: center;
+      width: 150%;
+      span {
+        color: $blue;
+
+        &.hello {
+          font-size: 50px;
+          font-weight: 700;
+        }
+        &.name {
+          font-size: 60px;
+          font-weight: 700;
+          color: $yellow;
+        }
+        &.description {
+          font-size: 65px;
+          font-weight: 100;
+          color: $purple;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 0;
+      .arrow-down {
+        font-size: 60px;
+        animation: arrow-blink 2s infinite;
+        color: $blue;
+      }
+      @keyframes arrow-blink {
+        25% {
+          opacity: 0;
+        }
+        75% {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
