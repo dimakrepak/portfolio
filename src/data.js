@@ -1,4 +1,4 @@
-export const works = [
+export const projects = [
   {
     id: 1,
     title: "News Website",
