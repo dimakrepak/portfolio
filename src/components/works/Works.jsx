@@ -5,10 +5,12 @@ import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 
 export default function Works() {
   const [currentSlider, setCurrentSlider] = useState(0);
-  console.log(projects);
+
   function handleArrowClick(arrow) {
-    if (arrow.state === "left") {
-      setCurrentSlider(currentSlider > 0 ? currentSlider - 1 : 2);
+    if (arrow === "left") {
+      setCurrentSlider(
+        currentSlider > 0 ? currentSlider - 1 : projects.length - 1
+      );
     } else {
       setCurrentSlider(
         currentSlider < projects.length - 1 ? currentSlider + 1 : 0

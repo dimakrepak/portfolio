@@ -29,10 +29,11 @@
     .wrapper {
       display: flex;
       position: relative;
-      left: -250px;
+      left: -50px;
       flex-flow: column;
       justify-self: flex-end;
       justify-content: center;
+      align-self: center;
       width: 150%;
       span {
         color: $blue;
@@ -42,14 +43,17 @@
           font-weight: 700;
         }
         &.name {
-          font-size: 60px;
+          font-size: 80px;
           font-weight: 700;
           color: $yellow;
         }
         &.description {
-          font-size: 65px;
+          font-size: 30px;
           font-weight: 100;
           color: $purple;
+          span {
+            font-weight: bold;
+          }
         }
       }
     }
