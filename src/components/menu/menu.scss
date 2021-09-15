@@ -3,7 +3,7 @@
 .menu {
   width: 300px;
   height: calc(100vh - 70px);
-  background-color: transparent;
+  background-color: $blue;
   position: fixed;
   top: 100vh;
   right: 0;
@@ -16,11 +16,31 @@
   ul {
     list-style: none;
     font-size: 35px;
-    color: $dark;
+    font-weight: 300;
+    color: $white;
+    margin-top: 50px;
     li {
       a {
         text-decoration: none;
         color: inherit;
+        position: relative;
+        margin-top: 10px;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          border-bottom: 1px solid $yellow;
+          height: 100%;
+          width: 100%;
+          transform: scaleX(0);
+          transition: transform 0.3s ease-in-out;
+        }
+        &:hover:before {
+          transform: scaleX(1);
+        }
+        &:hover {
+          color: $yellow;
+        }
       }
     }
   }
@@ -28,6 +48,6 @@
   &.active {
     top: 70px;
     right: 0;
-    background-color: #e7dfdd96;
+    background-color: rgba(14, 11, 22, 0.952);
   }
 }

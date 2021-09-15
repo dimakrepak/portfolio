@@ -58,6 +58,15 @@ export default function Works() {
         className="arrows arrow-right"
         onClick={() => handleArrowClick("right")}
       />
+      <div className="slider-pagination">
+        {projects.map((project, i) => (
+          <div
+            key={i}
+            className={"slider-thumbnail " + (currentSlider === i && "current")}
+            onClick={() => setCurrentSlider(i)}
+          ></div>
+        ))}
+      </div>
     </div>
   );
 }
