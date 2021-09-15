@@ -1,7 +1,12 @@
 import "./works.scss";
 import { projects } from "../../data";
 import { useState } from "react";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import {
+  ArrowBackIos,
+  ArrowForwardIos,
+  GitHub,
+  Link,
+} from "@material-ui/icons";
 
 export default function Works() {
   const [currentSlider, setCurrentSlider] = useState(0);
@@ -19,6 +24,7 @@ export default function Works() {
   }
   return (
     <div className="works" id="works">
+      <h1>My Projects.</h1>
       <div
         className="slider"
         style={{ transform: `translateX(-${currentSlider * 100}vw)` }}
@@ -26,8 +32,20 @@ export default function Works() {
         {projects.map((project) => (
           <div className="container">
             <div className="item">
-              <div className="left">{project.title}</div>
-              <div className="right"></div>
+              <div className="left">
+                <span className="project-title">{project.title}</span>
+                <span className="description">{project.description}</span>
+                <span className="technologies">{project.technologies}</span>
+                <div className="links">
+                  <a href={project.links.github} target="_blank">
+                    <GitHub />
+                  </a>
+                  <a href={project.links.link} target="_blank">
+                    <Link />
+                  </a>
+                </div>
+              </div>
+              <img src={project.img} alt={project.title} />
             </div>
           </div>
         ))}

@@ -1,3 +1,4 @@
+@import "../../variables.scss";
 .contact {
   background: rgb(231, 223, 221);
   background: linear-gradient(
@@ -32,19 +33,34 @@
         height: 40px;
         font-size: 15px;
         margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
       }
       textarea {
         width: 350px;
         height: 200px;
         font-size: 15px;
         margin-top: 20px;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
       }
       button {
         width: 150px;
         height: 50px;
-        background-color: black;
+        background-color: $yellow;
+        border: none;
+        border-radius: 25px;
         cursor: pointer;
         margin-top: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: all 0.8s ease;
+        &:hover {
+          background-color: $blue;
+          color: $white;
+        }
       }
     }
   }

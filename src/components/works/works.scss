@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
   .arrows {
     position: absolute;
     font-size: 70px;
@@ -22,8 +23,13 @@
   & .arrow-left {
     left: 100px;
   }
+  h1 {
+    font-size: 67px;
+    color: $white;
+    align-self: start;
+  }
   .slider {
-    height: 350px;
+    height: 400px;
     display: flex;
     position: absolute;
     left: 0;
@@ -34,25 +40,52 @@
       align-items: center;
       justify-content: center;
       .item {
-        width: 700px;
+        width: 750px;
         height: 100%;
-        background-color: white;
-        display: flex;
+        // display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 35px;
         overflow: hidden;
-
-        .left,
-        .right {
-          height: 100%;
-        }
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
+          rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+          rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
         .left {
-          flex: 2;
-          background-color: aqua;
+          position: absolute;
+          background-color: #0c0325f6;
+          height: inherit;
+          width: 300px;
+          display: flex;
+          flex-flow: column;
+          justify-content: space-around;
+          align-items: center;
+          color: $white;
+          font-weight: 300;
+          font-size: 18px;
+          z-index: 10;
+          padding: 8px;
+          .project-title {
+            font-size: 20px;
+            color: $yellow;
+            font-weight: 600;
+          }
+          span {
+            font-size: 13.5px;
+          }
+          .links {
+            a {
+              text-decoration: none;
+              color: $yellow;
+              margin: 5px;
+            }
+          }
         }
-        .right {
-          flex: 4;
+        img {
+          // object-fit: cover;
+          height: 110%;
+          width: 110%;
+          transform: rotate(-6deg);
         }
       }
     }
