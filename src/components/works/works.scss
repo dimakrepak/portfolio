@@ -1,4 +1,5 @@
 @import "../../variables.scss";
+@import "../../responsivness.scss";
 .works {
   position: relative;
   background: rgb(71, 23, 246);
@@ -22,7 +23,7 @@
       width: 20px;
       background-color: $dark;
       border-radius: 50%;
-      transition: all 0.5 ease-in;
+      transition: all 0.4s ease-in;
       margin: 10px;
       cursor: pointer;
       &.current {
@@ -35,12 +36,21 @@
     font-size: 70px;
     cursor: pointer;
     color: $yellow;
+    @include mobile {
+      font-size: 35px;
+    }
   }
   & .arrow-right {
     right: 100px;
+    @include mobile {
+      right: 0;
+    }
   }
   & .arrow-left {
     left: 100px;
+    @include mobile {
+      left: 0;
+    }
   }
   h1 {
     font-size: 67px;
@@ -70,6 +80,11 @@
         box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px,
           rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
           rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        @include mobile {
+          width: 250px;
+          height: 200px;
+          overflow: none;
+        }
         .left {
           position: absolute;
           background-color: #0c0325f6;
@@ -84,13 +99,24 @@
           font-size: 18px;
           z-index: 10;
           padding: 8px;
+          @include mobile {
+            width: 40%;
+          }
+
           .project-title {
             font-size: 20px;
             color: $yellow;
             font-weight: 600;
+            @include mobile {
+              display: block;
+              font-size: 12px;
+            }
           }
           span {
             font-size: 13.5px;
+            @include mobile {
+              display: none;
+            }
           }
           .links {
             a {
@@ -105,6 +131,11 @@
           height: 110%;
           width: 110%;
           transform: rotate(-6deg);
+          @include mobile {
+            transform: none;
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
