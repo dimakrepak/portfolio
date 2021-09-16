@@ -3,10 +3,6 @@ const app = express();
 const path = require("path");
 const port = process.env.PORT || 5000;
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static());
-}
-
 //Connection to client side
 if (process.env.NODE_ENV === "production") {
   // Exprees will serve up production assets
