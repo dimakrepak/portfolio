@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const port = process.env.PORT || 5000;
-const router = require("./routes/routes.js");
+const router = require("./server/routes/routes");
 
 //Middleware
 app.use(express.json());
