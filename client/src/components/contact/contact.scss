@@ -13,7 +13,7 @@
   }
 
   .left {
-    flex: 1;
+    flex: 0.4;
     display: flex;
     align-items: center;
 
@@ -24,7 +24,7 @@
     }
   }
   .right {
-    flex: 1;
+    flex: 0.6;
     display: flex;
     flex-flow: column;
     h1 {
@@ -52,13 +52,17 @@
         border: none;
         border-radius: 5px;
         padding: 5px;
+        color: $blue;
+        font-size: 18px;
       }
       textarea {
         width: 350px;
         height: 200px;
         font-size: 15px;
-        margin-top: 20px;
+        margin-top: 10px;
         border-radius: 5px;
+        font-size: 18px;
+        color: $blue;
         padding: 5px;
         border: none;
         @include mobile {
