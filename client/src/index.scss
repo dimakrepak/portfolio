@@ -1,7 +1,11 @@
+@import "./responsivness.scss";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
   outline: none;
+  @include mobile {
+    // overflow-x: hidden;
+  }
 }
