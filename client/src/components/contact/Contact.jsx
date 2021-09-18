@@ -28,7 +28,7 @@ export default function Contact() {
       console.log(e);
     }
   }
-  console.log(contact);
+
   return (
     <div className="contact" id="contact">
       <div className="left">
