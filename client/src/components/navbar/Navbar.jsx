@@ -23,7 +23,7 @@ export default function Navbar({ menuIsOpen, setMenuIsOpen }) {
           </div>
           {isCv ? (
             <div className="mail-container">
-              <span>Click for download my resume</span>
+              <span>Click to download my resume</span>
             </div>
           ) : (
             <div className="mail-container">

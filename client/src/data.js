@@ -17,7 +17,7 @@ export const projects = [
     title: "Social Media Website",
     img: "/assets/socialmedia.png",
     description:
-      "This is my Bootcamp Full-Stack Mern ﬁnal project. I developed a modern Social Media website with mandatory features such as like and dislike posts, search and visit a user’s proﬁles, follow and unfollow users, comment on posts, and more.",
+      "This is my Full-Stack Mern project. I developed a modern Social Media website with mandatory features such as like and dislike posts, search and visit a user’s proﬁles, follow and unfollow users, comment on posts, and more.",
     links: {
       link: "https://socialmedia-dimkre.herokuapp.com ",
       github: "https://github.com/dimakrepak/Social-Media",

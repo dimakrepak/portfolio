@@ -21,12 +21,7 @@ export default function Intro() {
       <div className="right">
         <div className="wrapper">
           {/* <span className="hello">HELLO:)</span> */}
-          <span className="name">Hi, I'm Dmitry Krepak.</span>
-          <span className="description">
-            I AM <span ref={textRef}></span> DEVELOPER
-          </span>
           <div className="find-me">
-            <span>Find me on</span>
             <a href="https://github.com/dimakrepak" target="_blank">
               <LinkedIn />
             </a>
@@ -37,6 +32,10 @@ export default function Intro() {
               <GitHub />
             </a>
           </div>
+          <span className="name">Hi, I'm Dmitry Krepak.</span>
+          <span className="description">
+            I AM <span ref={textRef}></span> DEVELOPER
+          </span>
         </div>
         <a href="#works">
           <KeyboardArrowDown className="arrow-down" />

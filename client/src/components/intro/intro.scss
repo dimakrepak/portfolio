@@ -88,26 +88,19 @@
         align-items: center;
         color: $white;
         // justify-content: center;
-        span {
-          color: $purple;
-          font-weight: 100;
-        }
+
         a {
           position: relative;
           text-decoration: none;
           color: $white;
-          margin-right: 5px;
+          margin: 5px;
           display: flex;
           justify-content: center;
           align-items: center;
           bottom: 0;
-        }
-        img {
-          width: 25px;
-        }
-        > * {
-          margin-right: 8px;
-          color: $yellow;
+          > * {
+            font-size: 30px;
+          }
         }
       }
     }
