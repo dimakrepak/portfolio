@@ -1,7 +1,7 @@
 import "./intro.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
-import { KeyboardArrowDown } from "@material-ui/icons";
+import { KeyboardArrowDown, LinkedIn, GitHub } from "@material-ui/icons";
 
 export default function Intro() {
   const textRef = useRef();
@@ -25,6 +25,18 @@ export default function Intro() {
           <span className="description">
             I AM <span ref={textRef}></span> DEVELOPER
           </span>
+          <div className="find-me">
+            <span>Find me on</span>
+            <a href="https://github.com/dimakrepak" target="_blank">
+              <LinkedIn />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dmitry-krepak/"
+              target="_blank"
+            >
+              <GitHub />
+            </a>
+          </div>
         </div>
         <a href="#works">
           <KeyboardArrowDown className="arrow-down" />

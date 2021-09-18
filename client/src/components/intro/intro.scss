@@ -44,7 +44,7 @@
     .wrapper {
       display: flex;
       position: relative;
-      left: -50px;
+      // left: -50px;
       flex-flow: column;
       justify-self: flex-end;
       justify-content: center;
@@ -80,6 +80,33 @@
           span {
             font-weight: 600;
           }
+        }
+      }
+      .find-me {
+        display: flex;
+        height: 30px;
+        align-items: center;
+        color: $white;
+        // justify-content: center;
+        span {
+          color: $purple;
+          font-weight: 100;
+        }
+        a {
+          position: relative;
+          text-decoration: none;
+          color: $white;
+          margin-right: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        img {
+          width: 25px;
+        }
+        > * {
+          margin-right: 8px;
+          color: $yellow;
         }
       }
     }

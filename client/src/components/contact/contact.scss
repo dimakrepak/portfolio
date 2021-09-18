@@ -9,30 +9,35 @@
   );
   display: flex;
   @include mobile {
-    flex-flow: column;
+    flex-flow: column-reverse;
   }
 
   .left {
     flex: 0.4;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     img {
       @include mobile {
-        width: 100vw;
+        height: 30vh;
+        flex: 0.3;
       }
     }
   }
   .right {
     flex: 0.6;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-flow: column;
+
     h1 {
       font-size: 55px;
       border-bottom: 4px solid black;
       display: inline;
       @include mobile {
-        font-size: 30px;
+        font-size: 40px;
       }
     }
     form {

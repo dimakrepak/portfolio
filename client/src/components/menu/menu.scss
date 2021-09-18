@@ -1,9 +1,9 @@
 @import "../../variables.scss";
-
+@import "../../responsivness.scss";
 .menu {
   width: 300px;
   height: calc(100vh - 70px);
-  background-color: $blue;
+  background-color: transparent;
   position: fixed;
   top: 100vh;
   right: 0;
@@ -13,12 +13,20 @@
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
+  @include mobile {
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+  }
   ul {
     list-style: none;
     font-size: 35px;
     font-weight: 300;
     color: $white;
     margin-top: 50px;
+    @include mobile {
+      margin: 0;
+    }
     li {
       a {
         text-decoration: none;
