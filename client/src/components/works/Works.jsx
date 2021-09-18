@@ -6,10 +6,14 @@ import {
   ArrowForwardIos,
   GitHub,
   Link,
+  Close,
 } from "@material-ui/icons";
+import { useMediaQuery } from "react-responsive";
 
 export default function Works() {
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 420px)" });
   const [currentSlider, setCurrentSlider] = useState(0);
+  const [sliderMobileInfo, setSliderMobileInfo] = useState(false);
 
   function handleArrowClick(arrow) {
     if (arrow === "left") {
@@ -32,19 +36,45 @@ export default function Works() {
         {projects.map((project) => (
           <div className="container">
             <div className="item">
-              <div className="left">
-                <span className="project-title">{project.title}</span>
-                <span className="description">{project.description}</span>
-                <span className="technologies">{project.technologies}</span>
-                <div className="links">
-                  <a href={project.links.github} target="_blank">
-                    <GitHub />
-                  </a>
-                  <a href={project.links.link} target="_blank">
-                    <Link />
-                  </a>
+              {isSmallScreen ? (
+                <div
+                  className={"left-mobile " + (sliderMobileInfo && "active")}
+                  onClick={() => setSliderMobileInfo(!sliderMobileInfo)}
+                >
+                  <span className="project-title">{project.title}</span>
+                  {sliderMobileInfo && (
+                    <div className="info">
+                      <span className="description">{project.description}</span>
+                      <span className="technologies">
+                        {project.technologies}
+                      </span>
+                    </div>
+                  )}
+                  <div className="links">
+                    <a href={project.links.github} target="_blank">
+                      <GitHub />
+                    </a>
+                    <a href={project.links.link} target="_blank">
+                      <Link />
+                    </a>
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="left">
+                  <span className="project-title">{project.title}</span>
+                  <span className="description">{project.description}</span>
+                  <span className="technologies">{project.technologies}</span>
+                  <div className="links">
+                    <a href={project.links.github} target="_blank">
+                      <GitHub />
+                    </a>
+                    <a href={project.links.link} target="_blank">
+                      <Link />
+                    </a>
+                  </div>
+                </div>
+              )}
+
               <img src={project.img} alt={project.title} />
             </div>
           </div>

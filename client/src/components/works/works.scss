@@ -18,6 +18,9 @@
     justify-content: center;
     position: absolute;
     bottom: 20px;
+    @include mobile {
+      bottom: 50px;
+    }
     .slider-thumbnail {
       height: 20px;
       width: 20px;
@@ -123,6 +126,66 @@
               text-decoration: none;
               color: $yellow;
               margin: 5px;
+            }
+          }
+        }
+        .left-mobile {
+          position: absolute;
+          background-color: #0c0325f6;
+          height: inherit;
+          width: 300px;
+          right: 60%;
+          display: flex;
+          flex-flow: column;
+          align-items: flex-end;
+          justify-content: space-around;
+          transition: all 0.5s ease-in-out;
+          &.active {
+            right: 0px;
+            align-items: center;
+            justify-content: space-around;
+
+            .project-title {
+              width: auto;
+              display: flex;
+              justify-content: center;
+              font-size: 15px;
+              color: $yellow;
+              font-weight: 600;
+              margin-right: 10px;
+            }
+
+            .info {
+              padding: 5px;
+              display: flex;
+              flex-flow: column;
+              justify-content: space-around;
+              color: $white;
+              font-size: 11px;
+            }
+          }
+          .project-title {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+            color: $yellow;
+            font-weight: 600;
+            margin-right: 10px;
+          }
+
+          .links {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+
+            a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              text-decoration: none;
+              color: $yellow;
+              margin-right: 15px;
             }
           }
         }

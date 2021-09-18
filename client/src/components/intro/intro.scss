@@ -100,6 +100,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          bottom: 0;
         }
         img {
           width: 25px;
@@ -113,6 +114,9 @@
     a {
       position: absolute;
       bottom: 0;
+      @include mobile {
+        bottom: 45px;
+      }
       .arrow-down {
         font-size: 60px;
         animation: arrow-blink 2s infinite;
