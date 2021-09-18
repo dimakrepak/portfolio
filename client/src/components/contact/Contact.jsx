@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function Contact() {
   const [contact, setContact] = useState({ name: "", email: "", message: "" });
+  const [messageSent, setMessageSent] = useState("");
 
   function handleFormChange(e) {
     setContact({
@@ -19,7 +20,11 @@ export default function Contact() {
         url: "/api/email",
         data: contact,
       });
+      if (res.status === 200) {
+        setMessageSent("Your message sent successfully to Dmitry");
+      }
     } catch (e) {
+      setMessageSent("One of the fields is empty or incorrect");
       console.log(e);
     }
   }
@@ -50,6 +55,7 @@ export default function Contact() {
             onChange={handleFormChange}
           ></textarea>
           <button type="submit">Send</button>
+          {messageSent && <span>{messageSent}</span>}
         </form>
       </div>
     </div>
