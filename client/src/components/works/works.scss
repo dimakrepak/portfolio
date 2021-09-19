@@ -17,14 +17,14 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 20px;
-    @include mobile {
-      bottom: 50px;
-    }
+    bottom: 10px;
     @include desktop {
-      bottom: 10px;
+      bottom: 5px;
     }
-    
+    @include mobile {
+      bottom: 80px;
+    }
+
     .slider-thumbnail {
       height: 20px;
       width: 20px;

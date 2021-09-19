@@ -7,7 +7,7 @@ $desktop-width: 1440px;
   }
 }
 @mixin desktop {
-  @media (max-width:#{$desktop-width}) {
+  @media (min-width:#{$mobile-width}) and (max-width:#{$desktop-width}) {
     @content;
   }
 }
